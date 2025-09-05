@@ -3,6 +3,7 @@ import React, { useMemo, useRef, useState } from "react";
 import { Card } from "./ui/Card";
 import { Th, Td } from "./ui/table";
 import { Input, NumberInput, Textarea, Select, RadioGroup } from "./ui/forms";
+import Graph from "./Graph";
 
 /**
  * FitteiaFormPretty
@@ -258,11 +259,7 @@ export default function FitteiaFormPretty() {
         <section className="grid grid-cols-1 gap-4 lg:grid-cols-3">
           <Card title="Preview">
             <div className="aspect-[9/7] w-full overflow-hidden rounded-xl border bg-white">
-              <img
-                src="/home/59wQhWMzmBuV.850Mou9TI6bK6joe9I9FpCgVDsjoPrZkwsK.DgA/Tutorial1/fit/fit-gph.png"
-                alt="Plot preview"
-                className="h-full w-full object-contain"
-              />
+              <Graph dataStr={dados} xLabel={xLabel} yLabel={yLabel} />
             </div>
             <div className="mt-3 flex flex-wrap gap-3 text-sm">
               {[
